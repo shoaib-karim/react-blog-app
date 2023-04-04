@@ -23,10 +23,11 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <Link to="/">Contact Us</Link>
+            <Link to="/blogslider">Blog Slider</Link>
           </li>
-          <i className="fas fa-search" id="search-icon"></i>
-          <input className="search-input" type="text" placeholder="Search.." />
+
+          {/* <i className="fas fa-search" id="search-icon"></i>
+          <input className="search-input" type="text" placeholder="Search.." /> */}
         </ul>
       </nav>
     </div>

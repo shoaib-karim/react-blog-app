@@ -6,8 +6,10 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const abortCont = new AbortController();
+
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortCont.signal })
         .then((res) => {
           if (!res.ok) {
             throw Error("Could not fetch BlogList from http://localhost:8000");
@@ -20,11 +22,16 @@ const useFetch = (url) => {
           setError(null);
         })
         .catch((err) => {
-          setIsPending(false);
-          setError(err.message);
-          console.log(err.message);
+          if (err.name === "AbortError") {
+            console.log("fetch aborted");
+          } else {
+            setIsPending(false);
+            setError(err.message);
+            console.log(err.message);
+          }
         });
     }, 1000);
+    return () => console.log("Cleaned Up ...");
   }, []);
 
   return { data, isPending, error };
