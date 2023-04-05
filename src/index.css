@@ -19,15 +19,16 @@ p {
   color: #212121;
   text-align: center;
   line-height: 1.4;
+  font-size: 1.4rem;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
 }
 
 h2 {
   color: #000;
-  font-size: 1.3rem;
+  font-size: 2rem;
   text-align: center;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -49,7 +50,7 @@ h2 {
 .grad-bar {
   width: 100%;
   height: 5px;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
   background-size: 400% 400%;
   -webkit-animation: gradbar 15s ease infinite;
   -moz-animation: gradbar 15s ease infinite;
@@ -69,7 +70,7 @@ h2 {
   -webkit-animation: gradbar 15s ease infinite;
   -moz-animation: gradbar 15s ease infinite;
   animation: gradbar 15s ease infinite;
-  padding-bottom: 8px;
+  /* padding-bottom: 8px; */
 }
 
 .navbar img {
@@ -262,6 +263,57 @@ input {
 .blog-preview button {
   display: inline-flex;
   background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+  text-decoration: none;
+  font-weight: 500;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* BlogDetails */
+
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: #fd3838;
+  margin-bottom: 30px;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: block;
+}
+
+.button,
+.create button {
+  display: inline-flex;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradbar 15s ease infinite;
+  -moz-animation: gradbar 15s ease infinite;
+  animation: gradbar 15s ease infinite;
   padding: 15px 35px;
   border: none;
   border-radius: 8px;
